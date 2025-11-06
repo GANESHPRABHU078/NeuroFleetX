@@ -1,0 +1,121 @@
+/* ===========================
+   Global App Styles
+=========================== */
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main App container */
+.App {
+  text-align: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* ===========================
+   Logo Section
+=========================== */
+.logo-container {
+  margin-bottom: 20px;
+}
+
+.logo-container img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px #00ffff;
+  }
+  to {
+    box-shadow: 0 0 25px #39cccc, 0 0 40px #00ffff;
+  }
+}
+
+/* ===========================
+   Buttons
+=========================== */
+button {
+  background-color: #39cccc;
+  border: none;
+  color: #001f3f;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #7fdbff;
+  transform: scale(1.05);
+}
+
+/* ===========================
+   Input Fields
+=========================== */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 90%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+  font-size: 14px;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ===========================
+   Card Layouts (Login/Dashboard)
+=========================== */
+.card {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
+  width: 400px;
+  margin: auto;
+  text-align: center;
+  backdrop-filter: blur(8px);
+}
+
+/* ===========================
+   Links
+=========================== */
+a {
+  color: #7fdbff;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+a:hover {
+  color: #39cccc;
+  text-decoration: underline;
+}
+
+/* ===========================
+   Toast Notifications
+=========================== */
+.Toastify__toast {
+  background-color: #001f3f !important;
+  color: white !important;
+}
