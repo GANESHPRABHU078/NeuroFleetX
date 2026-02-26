@@ -1,0 +1,235 @@
+/* Map Component Styles */
+
+.map-style-switcher {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  padding: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.map-style-switcher:hover {
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transform: translateY(-2px);
+}
+
+.map-style-select {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 2px solid #4caf50;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  background-color: white;
+  color: #333;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.map-style-select:hover {
+  border-color: #45a049;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+}
+
+.map-style-select:focus {
+  border-color: #2196f3;
+  box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.2);
+}
+
+/* Custom vehicle marker animation */
+.custom-vehicle-marker {
+  animation: markerBounce 0.5s ease;
+}
+
+@keyframes markerBounce {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Google Maps style user location marker */
+.location-marker-container {
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+/* Blue dot in center */
+.location-dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 16px;
+  background: #4285f4;
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  z-index: 3;
+}
+
+/* Pulsing ring effect */
+.location-pulse-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  background: rgba(66, 133, 244, 0.3);
+  border-radius: 50%;
+  animation: pulseRing 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  z-index: 1;
+}
+
+/* Second pulse for depth */
+.location-pulse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  background: rgba(66, 133, 244, 0.2);
+  border-radius: 50%;
+  animation: pulseRing 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  animation-delay: 1s;
+  z-index: 2;
+}
+
+@keyframes pulseRing {
+  0% {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2.5);
+    opacity: 0;
+  }
+}
+
+/* Google Maps style location button */
+.google-location-button {
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  z-index: 1000;
+  width: 40px;
+  height: 40px;
+  border-radius: 2px;
+  border: none;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  padding: 0;
+}
+
+.google-location-button:hover:not(:disabled) {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  transform: scale(1.02);
+}
+
+.google-location-button:active:not(:disabled) {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  transform: scale(0.98);
+}
+
+.google-location-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Location icon styles */
+.location-icon {
+  color: #666;
+  transition: color 0.2s ease;
+}
+
+.google-location-button:hover:not(:disabled) .location-icon {
+  color: #1a73e8;
+}
+
+.location-icon-loading {
+  color: #1a73e8;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Leaflet popup customization */
+.leaflet-popup-content-wrapper {
+  border-radius: 8px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+}
+
+.leaflet-popup-tip {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .map-style-switcher {
+    top: 5px;
+    right: 5px;
+    padding: 6px;
+  }
+
+  .map-style-select {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+}
+
+/* GPS Live tracking pulse animation for driver markers */
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7);
+  }
+  50% {
+    opacity: 0.8;
+    box-shadow: 0 0 0 10px rgba(76, 175, 80, 0);
+  }
+}
+
+/* GPS enabled driver marker styles */
+.custom-driver-marker.gps-enabled {
+  animation: markerPulse 2s infinite;
+}
+
+@keyframes markerPulse {
+  0%,
+  100% {
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+  }
+  50% {
+    filter: drop-shadow(0 2px 8px rgba(76, 175, 80, 0.8));
+  }
+}

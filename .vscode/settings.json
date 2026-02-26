@@ -1,0 +1,13 @@
+{
+  "java.project.sourcePaths": [
+    "Backend/src/main/java"
+  ],
+  "java.project.outputPath": "Backend/target/classes",
+  "java.configuration.updateBuildConfiguration": "automatic",
+  "java.compile.nullAnalysis.mode": "automatic",
+  "files.exclude": {
+    "**/target": true,
+    "**/node_modules": true,
+    "**/.git": true
+  }
+}

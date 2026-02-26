@@ -1,0 +1,33 @@
+.notification {
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  animation: slideInRight 0.5s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.notification-success {
+  background: #43e97b;
+}
+
+.notification-error {
+  background: #f5576c;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
