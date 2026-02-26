@@ -605,9 +605,9 @@ Built with ❤️ by the NeuroFleetX team
 
 ### 📧 Contact & Support
 
-- **Repository**: [github.com/Bhuvan-1005/NeuroFleetX](https://github.com/Bhuvan-1005/NeuroFleetX)
-- **Issues**: [Report a bug](https://github.com/Bhuvan-1005/NeuroFleetX/issues)
-- **Discussions**: [Join the conversation](https://github.com/Bhuvan-1005/NeuroFleetX/discussions)
+- **Repository**: [(https://github.com/GANESHPRABHU078/NeuroFleetX)](https://github.com/GANESHPRABHU078/NeuroFleetX)
+- **Issues**: [Report a bug]((https://github.com/GANESHPRABHU078/NeuroFleetX))
+- **Discussions**: [Join the conversation]((https://github.com/GANESHPRABHU078/NeuroFleetX))
 
 ---
 
